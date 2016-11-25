@@ -1,25 +1,40 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Class Welcome
+ */
 class Welcome extends CI_Controller {
 
 	/**
-	 * Index Page for this controller.
+	 * Au!thencation user session collection.
 	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * @var array
 	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
+	public $Session = [];
+
+	/**
+	 * Welcome constructor
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		parent::__construct();
+		$this->load->library(['blade', 'session']);
+		$this->load->helper(['url']);
+		$this->config->load('platform');
+
+		$this->Session = $this->session->userdata('logged_in');
+	}
+
+	/**
+	 * The front page for the petitition
+	 *
+	 * @see    GET|HEAD: /
+	 * @return blade instance
+	 */
+	public function index() {
+		$data['title'] = 'Index';
+		$this->blade->render('home', $data);
 	}
 }

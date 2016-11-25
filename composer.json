@@ -1,19 +1,20 @@
 {
-	"description": "Begrotings tekort petitie",
-	"name": "activisme/begrotingstekort",
+	"description": "The CodeIgniter framework",
+	"name": "codeigniter/framework",
 	"type": "project",
-	"homepage": "https://www.activisme.be",
+	"homepage": "https://codeigniter.com",
 	"license": "MIT",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+		"irc": "irc://irc.freenode.net/codeigniter",
+		"source": "https://github.com/bcit-ci/CodeIgniter"
+	},
 	"require": {
-		"php": ">=5.2.4",
 		"illuminate/database": "5.0.28",
-		"illuminate/events": "5.0.28"
-	},
-	"suggest": {
-		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
-	},
-	"require-dev": {
-		"mikey179/vfsStream": "1.1.*"
+		"illuminate/events": "5.0.28",
+		"knplabs/github-api": "^1.7",
+		"php-http/guzzle6-adapter": "^1.1"
 	},
 	"autoload": {
 		"classmap": [
@@ -21,5 +22,14 @@
 			"application/models",
 			"application/libraries"
 		]
+	},
+	"suggest": {
+		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*"
+	},
+	"config": {
+		"vendor-dir": "vendor/"
 	}
 }

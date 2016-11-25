@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -76,9 +75,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'begrotingstekort',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -95,8 +94,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-// Set eloquent.
-
+// Eloquent part
 $capsule = new \Illuminate\Database\Capsule\Manager();
 $capsule->addConnection(array(
         'driver' => in_array($db['default']['dbdriver'], array('mysql', 'mysqli')) ? 'mysql' : $db['default']['dbdriver'],
@@ -112,7 +110,6 @@ $capsule->addConnection(array(
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 $events = new Illuminate\Events\Dispatcher;
-
 $events->listen('illuminate.query', function($query, $bindings, $time, $name) {
     // Format binding data for sql insertion
     foreach ($bindings as $i => $binding) {
@@ -130,5 +127,4 @@ $events->listen('illuminate.query', function($query, $bindings, $time, $name) {
     $db->query_times[] = $time;
     $db->queries[] = $query;
 });
-
 $capsule->setEventDispatcher($events);
