@@ -45,6 +45,7 @@
 
 		{{-- Vue.js support --}}
 		<script src="{{ base_url('assets/js/vue.js') }}"></script>
+		<script src="{{ base_url('assets/js/vue-resource.js') }}"></script>
 		<script src="{{ base_url('assets/js/vue-signature.js') }}"></script>
 	</body>
 </html>
