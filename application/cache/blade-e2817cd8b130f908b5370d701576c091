@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1480172312;s:3:"ttl";i:3600;s:4:"data";s:2103:"<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+a:3:{s:4:"time";i:1480192935;s:3:"ttl";i:3600;s:4:"data";s:2184:"<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <!DOCTYPE html>
 <html lang="nl">
@@ -39,6 +39,7 @@ a:3:{s:4:"time";i:1480172312;s:3:"ttl";i:3600;s:4:"data";s:2103:"<?php defined('
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<?php //  Vue.js support  ?>		<script src="<?php echo  base_url('assets/js/vue.js') ; ?>"></script>
+		<script src="<?php echo  base_url('assets/js/vue-resource.js') ; ?>"></script>
 		<script src="<?php echo  base_url('assets/js/vue-signature.js') ; ?>"></script>
 	</body>
 </html>
