@@ -14,8 +14,8 @@
 
 		{{-- Stylesheets --}}
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Allan:700">
-		<link rel="stylesheet" href="/assets/css/custom.css">
+    	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Allan:700">
+		<link rel="stylesheet" href="{{ base_url('assets/css/custom.css') }}">
 
 		{{-- Background style class --}}
 		{{-- This needed to place here. Because we need to set the config key --}}
@@ -34,6 +34,15 @@
 	<body class="background front-end">
 		@include('layouts/partials/navbar')
 		<div class="container">
+			@if(isset($_SESSION['class']) && isset($_SESSION['message']))
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="{{ $_SESSION['class'] }}">
+							{{ $_SESSION['message'] }}
+						</div>
+					</div>
+				</div>
+			@endif
 			@include('layouts/partials/head')
 			@yield('content')
 			@include('layouts/partials/footer')
