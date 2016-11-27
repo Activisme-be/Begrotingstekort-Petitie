@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="panel panel-default">
+                        <div style="margin-top: 20px;" class="panel panel-default">
                             <div class="panel-heading"> Gevonden: </div>
                             <ul class="list-group">
                                 <li class="list-group-item">Lux Leaks <span class="pull-right"><strong>0€</strong></span></li>
