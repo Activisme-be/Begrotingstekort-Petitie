@@ -11,7 +11,6 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="">Meld een probleem</a></li>
         <li><a href="{{ base_url('disclaimer') }}">Disclaimer</a></li>
       </ul>
     </div>
