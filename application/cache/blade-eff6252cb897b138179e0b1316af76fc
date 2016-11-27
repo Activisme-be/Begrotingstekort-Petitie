@@ -1,12 +1,12 @@
-a:3:{s:4:"time";i:1480192935;s:3:"ttl";i:3600;s:4:"data";s:1050:"
+a:3:{s:4:"time";i:1480240322;s:3:"ttl";i:3600;s:4:"data";s:1120:"
 
 <?php $this->_section_start('content'); ?>
     <div style="margin-bottom: -22px;" class="row">
         <div class="col-sm-12">
             <div style="border-radius:0px; border: 0px;" class="panel panel-default">
                 <div class="panel-body">
-                    <div class="col-md-12">
 
+                    <div class="col-md-9">
                         <h2>Beste vrienden sympathisanten,</h2>
 
                         <p>
@@ -15,8 +15,11 @@ a:3:{s:4:"time";i:1480192935;s:3:"ttl";i:3600;s:4:"data";s:1050:"
                             Met deze speciale petitie proberen wij duidelijk te maken dat er andere manieren zijn. <br>
                             Wij burgers doen het zelf, voel u vrij om de regering een handje toe te steken! <br>
                         </p>
-
                     </div>
+
+                    <div class="col-md-3">
+                    </div>
+
                 </div>
             </div>
         </div>

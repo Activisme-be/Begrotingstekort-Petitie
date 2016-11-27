@@ -24,5 +24,5 @@ $config['app_author']        = 'Tom manheaghe';
  * ['image_background']  = Set the background image used in the app.
  *
  */
-$config['image_background']  = '';
-$config['image_front']       = ''; 
+$config['image_background']  = 'assets/img/background.jpg';
+$config['image_front']       = 'assets/img/banner.jpg';
