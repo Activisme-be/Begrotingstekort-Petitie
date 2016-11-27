@@ -6,7 +6,7 @@
             <div style="border-radius:0px; border: 0px;" class="panel panel-default">
                 <div class="panel-body">
 
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                         <h2>Beste vrienden sympathisanten,</h2>
 
                         <p>
@@ -17,7 +17,17 @@
                         </p>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Gevonden: </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Lux Leaks <span class="pull-right"><strong>0€</strong></span></li>
+                                <li class="list-group-item">Swiss Leaks <span class="pull-right"><strong>0€</strong></span></li>
+                                <li class="list-group-item">Bahama Leaks <span class="pull-right"><strong>0€</strong></span></li>
+                                <li class="list-group-item">Panama Papers<span class="pull-right"><strong>0€</strong></span></li>
+                                <li class="list-group-item">Vermogens taks<span class="pull-right"><strong>0€</strong></span></li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
