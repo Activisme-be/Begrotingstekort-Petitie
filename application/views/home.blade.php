@@ -18,13 +18,13 @@
 
                         <hr>
 
-                        <form method="POST" action="" class="form-horizontal">
+                        <form id="signature" method="POST" action="" class="form-horizontal">
                             <div class="form-group">
                                 <label class="control-label col-sm-2">
                                     Uw naam: <span class="text-danger">*</span>
                                 </label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="name" placeholder="Uw naam" class="form-control" />
+                                    <input v-model="signature.name" type="text" name="name" placeholder="Uw naam" class="form-control" />
                                 </div>
                             </div>
 
@@ -33,7 +33,7 @@
                                     Email: <span class="text-danger">*</span>
                                 </label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="email" placeholder="Uw email adres" />
+                                    <input v-model="signature.email" type="text" class="form-control" name="email" placeholder="Uw email adres" />
                                 </div>
                             </div>
 
@@ -43,7 +43,7 @@
                                 </label>
 
                                 <div class="col-sm-5">
-                                    <select class="form-control" name="finding">
+                                    <select v-model="signature.finding" class="form-control" name="finding">
                                         <option value="" selected>-- Selecteer uw vonst --</option>
                                         <option value="1000">(1.000€) Lux leaks</option>
                                         <option value="10000">(10.000€) Swiss Leaks</option>
@@ -54,9 +54,9 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" v-if="! submitted">
                                 <div class="col-sm-offset-2 col-sm-4">
-                                    <button type="submit" class="btn btn-sm btn-success">Insturen</button>
+                                    <button type="submit" v-attr="disabled: errors" class="btn btn-sm btn-success">Insturen</button>
                                     <button type="reset" class="btn btn-sm btn-danger">Reset</button>
                                 </div>
                             </div>
