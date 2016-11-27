@@ -3,9 +3,10 @@ new Vue({
 
     data: {
         signature: {
-            name    :  '',
+            name    : '',
             email   : '',
-            finding :  ''
+            finding : '',
+            source  : ''
         },
 
         submitted: false

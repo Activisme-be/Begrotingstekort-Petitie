@@ -18,12 +18,12 @@
 
                         <hr>
 
-                        <form id="signature" method="POST" action="" class="form-horizontal">
+                        <form id="signature" method="POST" action="{{ base_url('signature/insert') }}" class="form-horizontal">
                             <div class="form-group">
                                 <label class="control-label col-sm-2">
                                     Uw naam: <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-sm-5">
+                                <div class="col-sm-6">
                                     <input v-model="signature.name" type="text" name="name" placeholder="Uw naam" class="form-control" />
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                                 <label class="col-sm-2 control-label">
                                     Email: <span class="text-danger">*</span>
                                 </label>
-                                <div class="col-sm-5">
+                                <div class="col-sm-6">
                                     <input v-model="signature.email" type="text" class="form-control" name="email" placeholder="Uw email adres" />
                                 </div>
                             </div>
@@ -42,14 +42,25 @@
                                     Vonst: <span class="text-danger">*</span>
                                 </label>
 
-                                <div class="col-sm-5">
+                                <div class="col-sm-3">
+                                    <select v-model="signature.source" class="form-control" name="source">
+                                        <option value="" selected>-- bron --</option>
+                                        <option value="Lux Leaks">Lux Leaks</option>
+                                        <option value="Swiss Leaks">Swiss Leaks</option>
+                                        <option value="Bahama Leaks">Bahama Leaks</option>
+                                        <option value="Panama Papers">Panama Papers</option>
+                                        <option value="Vermogens Taks">Vermogens tax</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
                                     <select v-model="signature.finding" class="form-control" name="finding">
-                                        <option value="" selected>-- Selecteer uw vonst --</option>
-                                        <option value="1000">(1.000€) Lux leaks</option>
-                                        <option value="10000">(10.000€) Swiss Leaks</option>
-                                        <option value="100000">(100.000€) Panama Papers</option>
-                                        <option value="1000000">(1.000.000€) Bahama leaks</option>
-                                        <option value="10000000">(10.000.000€) Vermogens taks</option>
+                                        <option value="" selected>-- bedrag --</option>
+                                        <option value="1000">1.000€</option>
+                                        <option value="10000">10.000€</option>
+                                        <option value="100000">100.000€</option>
+                                        <option value="1000000">1.000.000€</option>
+                                        <option value="10000000">10.000.000€</option>
                                     </select>
                                 </div>
                             </div>
@@ -65,13 +76,13 @@
 
                     <div class="col-md-4">
                         <div style="margin-top: 20px;" class="panel panel-default">
-                            <div class="panel-heading"> Gevonden: </div>
+                            <div class="panel-heading"> Gevonden: <span class="pull-right"><strong>{{ number_format($count_all) }}€</strong></span></div>
                             <ul class="list-group">
-                                <li class="list-group-item">Lux Leaks <span class="pull-right"><strong>0€</strong></span></li>
-                                <li class="list-group-item">Swiss Leaks <span class="pull-right"><strong>0€</strong></span></li>
-                                <li class="list-group-item">Bahama Leaks <span class="pull-right"><strong>0€</strong></span></li>
-                                <li class="list-group-item">Panama Papers<span class="pull-right"><strong>0€</strong></span></li>
-                                <li class="list-group-item">Vermogens taks<span class="pull-right"><strong>0€</strong></span></li>
+                                <li class="list-group-item">Lux Leaks <span class="pull-right"><strong>{{ number_format($count_lux_leaks) }}€</strong></span></li>
+                                <li class="list-group-item">Swiss Leaks <span class="pull-right"><strong>{{ number_format($count_swiss_leaks) }}€</strong></span></li>
+                                <li class="list-group-item">Bahama Leaks <span class="pull-right"><strong>{{ number_format($count_bahama_leaks) }}€</strong></span></li>
+                                <li class="list-group-item">Panama Papers<span class="pull-right"><strong>{{ number_format($count_panama_papers) }}€</strong></span></li>
+                                <li class="list-group-item">Vermogens taks<span class="pull-right"><strong>{{ number_format($count_vermogens_tax) }}€</strong></span></li>
                             </ul>
                         </div>
                     </div>

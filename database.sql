@@ -37,8 +37,35 @@ CREATE TABLE `ci_sessions` (
 
 LOCK TABLES `ci_sessions` WRITE;
 /*!40000 ALTER TABLE `ci_sessions` DISABLE KEYS */;
-INSERT INTO `ci_sessions` VALUES ('u1u2igs9dmj81hckqr3eg73g3kaprg1v','::1',1480061693,'__ci_last_regenerate|i:1480061399;'),('kbhrf0mavvca79ugck2ug8a4t75ef7gm','::1',1480086440,'__ci_last_regenerate|i:1480086309;'),('2m7mo6cp0po2t5a6s56boqdb02q0e8fc','::1',1480172400,'__ci_last_regenerate|i:1480172312;');
+INSERT INTO `ci_sessions` VALUES ('u1u2igs9dmj81hckqr3eg73g3kaprg1v','::1',1480061693,'__ci_last_regenerate|i:1480061399;'),('kbhrf0mavvca79ugck2ug8a4t75ef7gm','::1',1480086440,'__ci_last_regenerate|i:1480086309;'),('2m7mo6cp0po2t5a6s56boqdb02q0e8fc','::1',1480172400,'__ci_last_regenerate|i:1480172312;'),('9uj5gd382d6muvaskpkvsni14spq32k3','::1',1480192942,'__ci_last_regenerate|i:1480192935;'),('fmv968mhm62601dqi20f830n7fr89qg0','::1',1480249340,'__ci_last_regenerate|i:1480249182;');
 /*!40000 ALTER TABLE `ci_sessions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `findings`
+--
+
+DROP TABLE IF EXISTS `findings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `findings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `finding` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `Findings_id_uindex` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `findings`
+--
+
+LOCK TABLES `findings` WRITE;
+/*!40000 ALTER TABLE `findings` DISABLE KEYS */;
+/*!40000 ALTER TABLE `findings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-26 21:40:09
+-- Dump completed on 2016-11-27 13:32:13
