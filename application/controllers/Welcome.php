@@ -17,11 +17,9 @@ class Welcome extends CI_Controller {
 	 */
 	public $Session = [];
 
-	/**
-	 * Welcome constructor
-	 *
-	 * @return void
-	 */
+    /**
+     * Welcome constructor
+     */
 	public function __construct() {
 		parent::__construct();
 		$this->load->library(['blade', 'session']);
@@ -39,6 +37,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index() {
 		$data['title'] = 'Index';
+
+		// Value counter
+        $data['count_all']           = Findings::sum('finding');
+        $data['count_lux_leaks']     = Findings::where('source', 'Lux Leaks')->sum('finding');
+        $data['count_swiss_leaks']   = Findings::where('source', 'Swiss Leaks')->sum('finding');
+        $data['count_bahama_leaks']  = Findings::where('source', 'Bahama Leaks')->sum('finding');
+        $data['count_panama_papers'] = Findings::where('source', 'Panama Papers')->sum('finding');
+        $data['count_vermogens_tax'] = Findings::where('source', 'Vermogens Taks')->sum('finding');
+
 		$this->blade->render('home', $data);
 	}
 }

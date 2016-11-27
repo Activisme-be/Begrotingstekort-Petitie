@@ -3,8 +3,8 @@
         <div class="col-md-10 footer-brand animated fadeInLeft">
             <h2>Over deze petitie</h2>
             <p>
-                Met deze petitie willen wij aankaarten dat de regering slecht bezig omtrent besparen
-                en het welles nietes spelletje in de ziekenzorg.
+                Naar aanleiding van het tekort in de begroting van 4.2 miljard euro ,
+                Gaan wij burgers met deze actie die ook een petitie vormt de regering helpen om het bedrag aan te vullen.
             </p>
 
             <p>© 2015 - {{ date('Y') }} Activisme.be</p>
