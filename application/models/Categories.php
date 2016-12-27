@@ -3,9 +3,9 @@
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Logins
+ * Class Categories
  */
-class Findings extends Eloquent
+class Categories extends Eloquent
 {
     /**
      * Specify the database connection.
@@ -18,14 +18,14 @@ class Findings extends Eloquent
      *
      * @var string
      */
-    protected $table = 'sign_begrotingstekort';
+    protected $table = 'sys_categories';
 
     /**
      * Mass-assign fields.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'finding', 'source'];
+    protected $fillable = ['name', 'description'];
 
     /**
      * Disable timestamps.

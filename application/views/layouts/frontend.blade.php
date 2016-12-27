@@ -42,10 +42,11 @@
 						</div>
 					</div>
 				</div>
-			@endif
-			@include('layouts/partials/head')
-			@yield('content')
-			@include('layouts/partials/footer')
+				@endif
+				@include('layouts/partials/head')
+				@yield('content')
+				@include('ticket')
+				@include('layouts/partials/footer')
 		</div>
 
 		{{-- Javascript --}}

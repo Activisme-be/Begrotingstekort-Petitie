@@ -12,6 +12,7 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="{{ base_url('disclaimer') }}">Disclaimer</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#newTicket">Meld een probleem</a></li>
       </ul>
     </div>
   </div>
